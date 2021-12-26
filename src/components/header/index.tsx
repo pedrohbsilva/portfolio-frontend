@@ -21,6 +21,7 @@ const Header = ({ pageName }:HeaderProps): React.ReactElement => {
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR'
   const [open, setOpen] = useState(false)
 
+  // eslint-disable-next-line no-console
   console.log(process.env.NEXT_PUBLIC_SITE_NAME)
 
   return (

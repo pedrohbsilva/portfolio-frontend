@@ -1,24 +1,24 @@
 import styled from 'styled-components'
 
 export const ContainerFooter = styled.footer`
-  width: 100%;
+  align-items: center;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  bottom: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
-  border: 1px solid #E8E8E8;
-  bottom: 0;
+  width: 100%;
   section{
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     p{
+      color: ${({ theme }) => theme.colors.text};
       display: flex;
       flex-direction: column;
-      padding: 8px;
-      color: ${props => props.theme.colors.black};
+      padding: ${({ theme }) => theme.spacings.extraSmall};
       span{
         font-weight: bold;
       }
@@ -29,6 +29,8 @@ export const ContainerFooter = styled.footer`
         }
       }
     }
-
+  }
+  @media (max-width: 768px) {
+    padding: 20px 10px 20px 10px;
   }
 `

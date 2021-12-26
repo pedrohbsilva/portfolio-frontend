@@ -23,11 +23,11 @@ export const IntroductionContainer = styled.section`
       font-size: 36px;
       font-style: normal;
       font-weight: normal;
-      color: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.text};
     }
     p{
       font-size: 16px;
-      color: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.text};
     }
 
   }
@@ -37,14 +37,18 @@ export const IntroductionContainer = styled.section`
 
   @media only screen and (max-width: 700px) {
     flex-direction: column;
-    margin-top: 130px;
+    margin-top: 100px;
     div{
       text-align: justify;
       width: 95%;
       margin-left: 0;
-      margin: 8px;
+      padding: 10px;
       align-items: center;
-
+      height: 80vh;
+      h1{
+        font-size: 28px;
+        padding-bottom: 8px;
+      }
     }
   }
 `

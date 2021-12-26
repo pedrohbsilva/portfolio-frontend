@@ -1,29 +1,32 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  width: 100%;
-  height: 100px;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  height: 100px;
   justify-content: space-between;
+  margin-bottom: -100px;
   padding: 20px 40px 20px 40px;
-  margin-bottom: -150px;
+  width: 100%;
   z-index: 10;
   section{
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     p{
+      color: ${({ theme }) => theme.colors.text};
       display: flex;
       flex-direction: column;
       padding: 8px;
-      color: ${props => props.theme.colors.black};
       span{
         font-weight: bold;
       }
     }
+  }
+  @media (max-width: 768px) {
+    padding: 20px 10px 20px 10px;
   }
 `
 
@@ -32,27 +35,28 @@ type HeaderProps = {
 }
 
 export const HeaderMenu = styled.button<HeaderProps>`
+  background: none;
+  border: none;
+  display: none;
   height: 30px;
   margin: 8px;
-  border: none;
-  background: none;
+  right: 0;
   z-index: 20;
-  display: none;
   @media (max-width: 768px) {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-    position: ${({ open }) => open ? 'absolute' : 'relative'};
-    padding-right: ${({ open }) => open ? '40px' : 0};
-    right: 0;
     cursor: pointer;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin: 0;
+    position: ${({ open }) => open ? 'fixed' : 'relative'};
+    right: 10px;
   }
   div {
-    width: 3rem;
-    height: 0.4rem;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.especial};
+    height: ${({ theme }) => theme.spacings.extraSmall};
     transform-origin: 1px;
     transition: all 0.3s linear;
+    width: 30.5px;
     &:nth-child(1) {
       transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
     }
@@ -67,34 +71,34 @@ export const HeaderMenu = styled.button<HeaderProps>`
 `
 
 export const HeaderNav = styled.nav<HeaderProps>`
-  display: flex;
-  width: 60%;
-  min-width: 15%;
   align-items: center;
+  display: flex;
   justify-content: space-evenly;
+  min-width: 15%;
+  width: 60%;
   a{
-    width: 200px;
-    margin: 8px;
-    border: 1px solid #CCDFFF;
+    align-items: center;
     background: none;
+    border: 1px solid ${({ theme }) => theme.colors.borderEspecial};
     border-radius: 8px;
-    padding: 16px 8px 16px 8px;
+    color: ${({ theme }) => theme.colors.text};
+    cursor: pointer;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: ${props => props.theme.colors.black};
-    font-weight: bold;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.font.sizes.medium};
+    font-weight: bold;
+    justify-content: center;
+    margin: ${({ theme }) => theme.spacings.small};
+    padding: 16px 8px 16px 8px;
     text-decoration: none;
     transition: background 0.3s ease-in-out;
+    width: ${({ theme }) => theme.spacings.bigLarge};
     &:hover {
-      background: #CCDFFF;
+      background: ${({ theme }) => theme.colors.borderEspecial};
     }
     &:active {
-      background: #EDDDDD;
+      background: ${({ theme }) => theme.colors.border};
     }
   }
 
@@ -110,16 +114,6 @@ export const HeaderNav = styled.nav<HeaderProps>`
     padding-top: 8.5rem;
     justify-content: flex-start;
     transition: transform 0.3s ease-in-out;
-    border-left: 1px solid black;
-    li {
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      border-bottom: 1px solid black;
-      &:nth-child(1){
-        margin-top: 30px;
-      }
-    }
-
+    border-left: 1px solid ${({ theme }) => theme.colors.text};
   }
 `

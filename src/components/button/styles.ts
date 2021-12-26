@@ -1,22 +1,25 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
-  background: linear-gradient(90deg, #00FFFF 0%, #7000FF 109.38%);
-  height: 56px;
+  background: ${({ theme }) => theme.colors.linear};
   border: 0;
-  padding: 0 16px;
-  color: #ffffff;
-  width: auto;
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 16px;
   border-radius: 8px;
+  color: ${({ theme }) => theme.colors.background};
   cursor: pointer;
+  font-size: ${({ theme }) => theme.font.sizes.large};
+  font-weight: 500;
+  height: 56px;
+  padding: ${({ theme }) => theme.spacings.extraSmall};
   transition: opacity 0.3s;
+  width: auto;
+
   &:hover {
     opacity: 0.7;
   }
   &:active {
     opacity: 1;
+  }
+  @media (max-width: 768px) {
+    margin: ${({ theme }) => theme.spacings.small};
   }
 `

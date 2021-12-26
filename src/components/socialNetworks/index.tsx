@@ -1,5 +1,7 @@
 import { SiGithub, SiLinkedin } from 'react-icons/si'
 
+import { theme } from 'src/styles/theme'
+
 import { SocialNetworksContainer } from './styles'
 const SocialNetworks = (): React.ReactElement => {
   return (
@@ -10,7 +12,7 @@ const SocialNetworks = (): React.ReactElement => {
         target='_blank'
         rel='noreferrer noopener'
       >
-        <SiLinkedin size={35} color='#21B5FF' />
+        <SiLinkedin size={35} color={theme.colors.especial} />
       </a>
 
       <a
@@ -19,7 +21,7 @@ const SocialNetworks = (): React.ReactElement => {
         target='_blank'
         rel='noreferrer noopener'
       >
-        <SiGithub size={35} color='#21B5FF' />
+        <SiGithub size={35} color={theme.colors.especial} />
       </a>
     </SocialNetworksContainer>
   )

@@ -2,6 +2,8 @@ export interface LocaleProps {
   message?: string;
   home?: string;
   copyright?: string;
+  aboutMe?: string;
+  hello?: string;
 }
 
 export interface MessageProps {

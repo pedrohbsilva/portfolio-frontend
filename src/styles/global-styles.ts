@@ -8,26 +8,10 @@ export const GlobalStyles = createGlobalStyle`
       padding: 0;
       outline: none;
     }
-/*
-    ::-webkit-scrollbar {
-      width: 12px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: ${theme.colors.background};
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: ${theme.colors.turquoise};
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: ${theme.colors.turquoise100};
-    } */
 
     ::selection {
       color: ${theme.colors.background};
-      background: ${theme.colors.title};
+      background: ${theme.colors.text};
     }
 
     html {
@@ -47,10 +31,6 @@ export const GlobalStyles = createGlobalStyle`
       font-size: ${theme.font.sizes.medium};
       color: ${theme.colors.text};
       background: ${theme.colors.background};
-
-      @media only screen and (min-width: 1440px) {
-        font-size: 2rem;
-      }
     }
 
     #__next {
@@ -66,7 +46,7 @@ export const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-      color: ${theme.colors.title};
+      color: ${theme.colors.text};
     }
   `}
 `

@@ -21,6 +21,8 @@ const Header = ({ pageName }:HeaderProps): React.ReactElement => {
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR'
   const [open, setOpen] = useState(false)
 
+  console.log(process.env.NEXT_PUBLIC_SITE_NAME)
+
   return (
     <>
       <Seo title={`${pageName} | ${process.env.NEXT_PUBLIC_SITE_NAME}`} />

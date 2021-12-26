@@ -1,0 +1,50 @@
+{
+  "name": "portfolio-frontend",
+  "private": true,
+  "description": "Site com o propósito de mostrar conteúdo e portfólio de sucesso.",
+  "author": "Pedro Henrique B. da Silva",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint-code-style": "eslint . --ext=.js,.ts,.tsx --fix",
+    "lint-check-types": "tsc --noemit",
+    "lint-unused-exports": "./node_modules/.bin/ts-unused-exports tsconfig.json --allowUnusedTypes --excludePathsFromReport=pages",
+    "linter": "yarn lint-code-style && yarn lint-check-types",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.4",
+    "@types/react": "17.0.38",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "ts-unused-exports": "^7.0.1",
+    "typescript": "4.5.4"
+  }
+}

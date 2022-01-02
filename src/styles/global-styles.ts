@@ -9,11 +9,6 @@ export const GlobalStyles = createGlobalStyle`
       outline: none;
     }
 
-    ::selection {
-      color: ${theme.colors.background};
-      background: ${theme.colors.text};
-    }
-
     html {
       font-size: 62.5%;
 

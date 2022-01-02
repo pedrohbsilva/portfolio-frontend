@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   flex-direction: row;
   height: 100px;
   justify-content: space-between;
-  margin-bottom: -100px;
+  margin-bottom: -50px;
   padding: 20px 40px 20px 40px;
   width: 100%;
   z-index: 10;
@@ -40,7 +40,7 @@ export const HeaderMenu = styled.button<HeaderProps>`
   display: none;
   height: 30px;
   margin: 8px;
-  right: 0;
+  right: -10px;
   z-index: 20;
   @media (max-width: 768px) {
     cursor: pointer;
@@ -49,7 +49,7 @@ export const HeaderMenu = styled.button<HeaderProps>`
     justify-content: space-around;
     margin: 0;
     position: ${({ open }) => open ? 'fixed' : 'relative'};
-    right: 10px;
+    right: 20px;
   }
   div {
     background-color: ${({ theme }) => theme.colors.especial};
@@ -86,11 +86,11 @@ export const HeaderNav = styled.nav<HeaderProps>`
     display: flex;
     flex-direction: row;
     font-family: "Montserrat", sans-serif;
-    font-size: ${({ theme }) => theme.font.sizes.medium};
+    font-size: ${({ theme }) => theme.font.sizes.small};
     font-weight: bold;
     justify-content: center;
     margin: ${({ theme }) => theme.spacings.small};
-    padding: 16px 8px 16px 8px;
+    padding: 16px;
     text-decoration: none;
     transition: background 0.3s ease-in-out;
     width: ${({ theme }) => theme.spacings.bigLarge};

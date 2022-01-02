@@ -16,11 +16,11 @@ export const IntroductionContainer = styled.section`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    height: 50vh;
+    height: 70vh;
     z-index: 1;
 
     h1{
-      font-size: 36px;
+      font-size: ${({ theme }) => theme.font.sizes.superLarge};
       font-style: normal;
       font-weight: normal;
       color: ${({ theme }) => theme.colors.text};
@@ -28,6 +28,11 @@ export const IntroductionContainer = styled.section`
     p{
       font-size: 16px;
       color: ${({ theme }) => theme.colors.text};
+      font-style: normal;
+      line-height: 22px;
+      opacity: 0.8;
+      text-align: justify;
+      font-family: "Montserrat", sans-serif;
     }
 
   }
@@ -37,7 +42,7 @@ export const IntroductionContainer = styled.section`
 
   @media only screen and (max-width: 700px) {
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 40px;
     div{
       text-align: justify;
       width: 95%;

@@ -21,7 +21,7 @@ const Introduction = (): React.ReactElement => {
           {languages[myLocales].aboutMe as string}
         </p>
         <Button>
-          Entre em contato
+          {languages[myLocales].contact as string}
         </Button>
         <SocialNetworks />
       </div>

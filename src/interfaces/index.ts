@@ -1,9 +1,15 @@
 export interface LocaleProps {
-  message?: string;
-  home?: string;
-  copyright?: string;
   aboutMe?: string;
+  blog?: string;
+  contact?: string;
+  copyright?: string;
   hello?: string;
+  home?: string;
+  loading?: string;
+  message?: string;
+  portfolio?: string;
+  portfolioMessage?: string;
+  teaching?: string;
 }
 
 export interface MessageProps {
@@ -19,6 +25,7 @@ export interface FormProps{
 
 export interface HeaderProps{
   pageName: string;
+  title: string;
 }
 
 export interface LinksContainerProps {

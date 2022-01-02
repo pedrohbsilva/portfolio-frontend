@@ -11,7 +11,7 @@ const Portfolio = ():React.ReactElement => {
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR'
   return (
     <>
-      <Header pageName='blog' title='portfolio' />
+      <Header pageName={languages[myLocales].portfolio as string} title='portfolio' />
       <Introduction />
       <Footer />
     </>

@@ -11,7 +11,7 @@ const Blog = ():React.ReactElement => {
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR'
   return (
     <>
-      <Header pageName='blog' title='blog' />
+      <Header pageName={languages[myLocales].blog as string} title='blog' />
       <Introduction />
       <Footer />
     </>

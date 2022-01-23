@@ -91,8 +91,8 @@ export const HeaderNav = styled.nav<LinksContainerProps>`
           border-style: outset;
           outline: none;
           box-shadow: none;
-          transform: scale(0.3);
-          transition: all 0.3s linear;
+          outline-offset: none;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
       }
       svg {

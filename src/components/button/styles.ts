@@ -13,6 +13,7 @@ export const Container = styled.button`
   transition: opacity 0.3s;
   width: auto;
   padding: 0 16px;
+  outline: none;
 
   &:hover {
     opacity: 0.7;

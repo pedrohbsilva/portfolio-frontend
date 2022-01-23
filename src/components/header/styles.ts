@@ -81,19 +81,30 @@ export const HeaderNav = styled.nav<LinksContainerProps>`
       display: none;
       background: none;
       border: 0;
+      outline: none;
       position: ${active ? 'fixed' : 'relative'};
       top: ${active ? 25 : 0}px;
       @media only screen and (max-width: 768px) {
         display: block;
         cursor: pointer;
+        &:active {
+          border-style: outset;
+          outline: none;
+          box-shadow: none;
+          transform: scale(0.3);
+          transition: all 0.3s linear;
+        }
       }
-
       svg {
         font-size: ${theme.font.sizes.superLarge};
         color: ${theme.colors.text};
       }
     }
     @media only screen and (max-width: 768px) {
+      background-color: ${active ? 'rgba(0, 0, 0, 0.5);' : ''};
+      box-shadow: ${active ? '0 0 0 10000px rgba(0, 0, 0, 0.5);' : ''};
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      z-index: 997;
       li {
         border-bottom: 1px solid #c4c4c4;
       }

@@ -92,7 +92,6 @@ export const HeaderNav = styled.nav<LinksContainerProps>`
           outline: none;
           box-shadow: none;
           outline-offset: none;
-          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
       }
       svg {

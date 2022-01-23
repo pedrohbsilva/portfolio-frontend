@@ -43,5 +43,9 @@ export const GlobalStyles = createGlobalStyle`
     h6 {
       color: ${theme.colors.text};
     }
+    button,
+    a {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
   `}
 `;

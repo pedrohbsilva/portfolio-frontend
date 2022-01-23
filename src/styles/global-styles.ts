@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
@@ -15,14 +15,14 @@ export const GlobalStyles = createGlobalStyle`
       @media only screen and (max-width: 768px) {
         font-size: 60%;
         ::-webkit-scrollbar {
-            display: none;
+          display: none;
         }
       }
     }
 
     body {
       height: 100vh;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: ${theme.font.sizes.medium};
       color: ${theme.colors.text};
       background: ${theme.colors.background};
@@ -44,4 +44,4 @@ export const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.text};
     }
   `}
-`
+`;

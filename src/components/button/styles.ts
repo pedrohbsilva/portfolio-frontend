@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.button`
   background: ${({ theme }) => theme.colors.linear};
@@ -23,4 +23,4 @@ export const Container = styled.button`
   @media (max-width: 768px) {
     margin: ${({ theme }) => theme.spacings.small};
   }
-`
+`;

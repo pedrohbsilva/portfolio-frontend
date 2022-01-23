@@ -1,9 +1,14 @@
 {
   "name": "portfolio-frontend",
+  "version": "1.0.0",
   "private": true,
   "description": "Site com o propósito de mostrar conteúdo e portfólio de sucesso.",
   "author": "Pedro Henrique B. da Silva",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrohbsilva/portfolio-frontend"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +20,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.2",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -30,6 +36,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.5.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-config-standard-jsx": "^10.0.0",

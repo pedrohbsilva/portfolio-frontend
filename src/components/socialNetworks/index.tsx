@@ -1,30 +1,30 @@
-import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-import { theme } from 'src/styles/theme'
+import { theme } from 'src/styles/theme';
 
-import { SocialNetworksContainer } from './styles'
+import { SocialNetworksContainer } from './styles';
 const SocialNetworks = (): React.ReactElement => {
   return (
     <SocialNetworksContainer>
       <a
-        title='LinkedIn'
-        href='https://www.linkedin.com/in/pedro-h-b-da-silva/'
-        target='_blank'
-        rel='noreferrer noopener'
+        title="LinkedIn"
+        href="https://www.linkedin.com/in/pedro-h-b-da-silva/"
+        target="_blank"
+        rel="noreferrer noopener"
       >
         <SiLinkedin size={35} color={theme.colors.especial} />
       </a>
 
       <a
-        title='GitHub'
-        href='https://github.com/pedrohbsilva/'
-        target='_blank'
-        rel='noreferrer noopener'
+        title="GitHub"
+        href="https://github.com/pedrohbsilva/"
+        target="_blank"
+        rel="noreferrer noopener"
       >
         <SiGithub size={35} color={theme.colors.especial} />
       </a>
     </SocialNetworksContainer>
-  )
-}
+  );
+};
 
-export default SocialNetworks
+export default SocialNetworks;

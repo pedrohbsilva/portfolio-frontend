@@ -1,9 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true
+    es2021: true,
+    node: true,
   },
   extends: [
+    'next',
+    'next/core-web-vitals',
+    'eslint:recommended',
     'plugin:react/recommended',
     'standard',
     'standard-react',
@@ -12,22 +16,25 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    ecmaVersion: 11,
-    sourceType: 'module'
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
   plugins: [
     '@typescript-eslint',
     'jsx-a11y',
     'import',
     'prettier',
-    'react-hooks'
+    'react-hooks',
+    'react',
   ],
   rules: {
     'react/jsx-one-expression-per-line': 'off',
@@ -44,8 +51,8 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       {
-        allowExpressions: true
-      }
+        allowExpressions: true,
+      },
     ],
     'react/prop-types': 'off',
     '@typescript-eslint/no-var-requires': 'off',
@@ -54,19 +61,24 @@ module.exports = {
       'error',
       {
         groups: ['builtin', 'external', 'internal'],
-        'newlines-between': 'always-and-inside-groups'
-      }
-    ]
+        'newlines-between': 'always-and-inside-groups',
+      },
+    ],
+    'react/display-name': 'off',
+    '@next/next/no-document-import-in-page': 'off',
   },
   globals: {
-    React: 'writable'
+    React: 'writable',
   },
   settings: {
     'import/resolver': {
       typescript: {},
       node: {
-        extensions: ['.ts', '.tsx']
-      }
-    }
-  }
-}
+        extensions: ['.ts', '.tsx'],
+      },
+    },
+    react: {
+      version: 'detect',
+    },
+  },
+};

@@ -1,15 +1,15 @@
-import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
 
-import { theme } from '../styles/theme'
-import { GlobalStyles } from '../styles/global-styles'
-function MyApp ({ Component, pageProps }: AppProps): React.ReactElement {
+import { theme } from '../styles/theme';
+import { GlobalStyles } from '../styles/global-styles';
+function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Component {...pageProps} />
     </ThemeProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

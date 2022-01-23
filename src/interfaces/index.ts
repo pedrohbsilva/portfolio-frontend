@@ -16,14 +16,14 @@ export interface MessageProps {
   [key: string]: LocaleProps;
 }
 
-export interface FormProps{
+export interface FormProps {
   name: string;
   email: string;
   phone: string;
   information: string;
 }
 
-export interface HeaderProps{
+export interface HeaderProps {
   pageName: string;
   title: string;
 }

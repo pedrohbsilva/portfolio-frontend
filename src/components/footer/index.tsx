@@ -1,31 +1,21 @@
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { languages } from '../../locales';
+import LogoName from '../logoName';
 import SocialNetworks from '../socialNetworks';
-import { ContainerFooter } from './styles';
+import { FooterContainer, FooterText } from './styles';
 const Footer = (): React.ReactElement => {
   const { locale } = useRouter();
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
 
   return (
-    <ContainerFooter>
+    <FooterContainer>
       <section>
-        <Image
-          loading="lazy"
-          src="/vercel.svg"
-          alt="My Image"
-          width={50}
-          height={50}
-        />
-        <p>
-          <span>Pedro</span>
-          Henrique
-        </p>
-        <p>{languages[myLocales].copyright as string}</p>
+        <LogoName />
+        <FooterText>{languages[myLocales].copyright as string}</FooterText>
       </section>
       <SocialNetworks />
-    </ContainerFooter>
+    </FooterContainer>
   );
 };
 

@@ -12,7 +12,7 @@ const Home = (): React.ReactElement => {
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
   return (
     <>
-      <Header pageName={languages[myLocales].home as string} title="home" />
+      <Header pageName={languages[myLocales].home as string} />
       <Introduction />
       <HomePortfolio />
       <Footer />

@@ -11,10 +11,7 @@ const Teaching = (): React.ReactElement => {
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
   return (
     <>
-      <Header
-        pageName={languages[myLocales].teaching as string}
-        title="teaching"
-      />
+      <Header pageName={languages[myLocales].teaching as string} />
       <Introduction />
       <Footer />
     </>

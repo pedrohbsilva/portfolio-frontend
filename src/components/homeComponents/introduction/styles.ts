@@ -41,7 +41,7 @@ export const IntroductionContainer = styled.section`
 
   @media only screen and (max-width: 700px) {
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 50px;
     div {
       text-align: justify;
       width: 95%;

@@ -1,21 +1,3 @@
-export interface LocaleProps {
-  aboutMe?: string;
-  blog?: string;
-  contact?: string;
-  copyright?: string;
-  hello?: string;
-  home?: string;
-  loading?: string;
-  message?: string;
-  portfolio?: string;
-  portfolioMessage?: string;
-  teaching?: string;
-}
-
-export interface MessageProps {
-  [key: string]: LocaleProps;
-}
-
 export interface FormProps {
   name: string;
   email: string;
@@ -25,11 +7,30 @@ export interface FormProps {
 
 export interface HeaderProps {
   pageName: string;
-  title: string;
 }
 
 export interface LinksContainerProps {
   active: boolean;
+}
+
+export interface LocaleProps {
+  aboutMe?: string;
+  blog?: string;
+  contact?: string;
+  copyright?: string;
+  enUS?: string;
+  hello?: string;
+  home?: string;
+  language?: string;
+  loading?: string;
+  message?: string;
+  portfolio?: string;
+  portfolioMessage?: string;
+  ptBR?: string;
+  teaching?: string;
+}
+export interface MessageProps {
+  [key: string]: LocaleProps;
 }
 
 export interface SEOProps {

@@ -10,17 +10,38 @@ export const Container = styled.button`
   font-weight: 500;
   height: 56px;
   padding: ${({ theme }) => theme.spacings.extraSmall};
-  transition: opacity 0.3s;
   width: auto;
   padding: 0 16px;
-  outline: none;
 
-  &:hover {
-    opacity: 0.7;
+  &:not(:disabled) {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
   }
-  &:active {
-    opacity: 1;
+
+  &:not(:disabled):after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
   }
+
+  &:not(:disabled):active:after {
+    transform: scale(0, 0);
+    opacity: 0.3;
+    transition: 0s;
+  }
+
   @media (max-width: 768px) {
     margin: ${({ theme }) => theme.spacings.small};
   }

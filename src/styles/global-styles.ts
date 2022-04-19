@@ -26,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: ${theme.font.sizes.medium};
       color: ${theme.colors.text};
       background: ${theme.colors.background};
+      transition: all 0.3s linear;
     }
 
     #__next {

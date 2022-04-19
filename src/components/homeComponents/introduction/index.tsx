@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { ReactElement } from 'react';
 
 import Button from 'src/components/button';
 
@@ -7,16 +8,16 @@ import SocialNetworks from 'src/components/socialNetworks';
 import { languages } from 'src/locales';
 
 import { IntroductionContainer } from './styles';
-const Introduction = (): React.ReactElement => {
+const Introduction = (): ReactElement => {
   const { locale } = useRouter();
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
-
+  const { hello, aboutMe, contact } = languages[myLocales];
   return (
     <IntroductionContainer>
       <div>
-        <h1>{languages[myLocales].hello as string}</h1>
-        <p>{languages[myLocales].aboutMe as string}</p>
-        <Button>{languages[myLocales].contact as string}</Button>
+        <h1>{hello}</h1>
+        <p>{aboutMe}</p>
+        <Button>{contact}</Button>
         <SocialNetworks />
       </div>
       <Image

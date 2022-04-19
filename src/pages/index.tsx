@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { ReactElement } from 'react';
 
 import Footer from 'src/components/footer';
 
@@ -7,12 +8,13 @@ import HomePortfolio from 'src/components/homeComponents/homePortfolio';
 import Introduction from 'src/components/homeComponents/introduction';
 
 import { languages } from '../locales';
-const Home = (): React.ReactElement => {
+const Home = (): ReactElement => {
   const { locale } = useRouter();
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
+  const { home } = languages[myLocales];
   return (
     <>
-      <Header pageName={languages[myLocales].home as string} />
+      <Header pageName={home} />
       <Introduction />
       <HomePortfolio />
       <Footer />

@@ -1,8 +1,9 @@
 import Head from 'next/head';
+import { ReactElement } from 'react';
 
 import { SEOProps } from 'src/interfaces';
 
-const SEO = ({ title, description }: SEOProps): React.ReactElement => {
+const SEO = ({ title, description }: SEOProps): ReactElement => {
   return (
     <Head>
       <title>{title}</title>

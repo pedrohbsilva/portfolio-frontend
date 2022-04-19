@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import { ReactElement } from 'react';
 
 import { LogoNameContainer } from './styles';
 
-const LogoName = (): React.ReactElement => {
+const LogoName = (): ReactElement => {
   return (
     <LogoNameContainer>
       <Image

@@ -1,24 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { ReactElement } from 'react';
 
 import { languages } from 'src/locales';
 
 import { CountriesContainer } from './styles';
 
-const Countries = (): React.ReactElement => {
+const Countries = (): ReactElement => {
   const { locale } = useRouter();
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
-  const PTBR = 'ptBR';
-  const ENUS = 'enUS';
-
+  const { ptBR, enUS } = languages[myLocales];
   return (
     <CountriesContainer>
-      <Link
-        href="/pt-BR"
-        passHref
-        locale={languages[myLocales][PTBR] as string}
-      >
+      <Link href="/pt-BR" passHref locale={ptBR}>
         <a style={{ height: 50 }}>
           <Image
             loading="lazy"
@@ -29,11 +24,7 @@ const Countries = (): React.ReactElement => {
           />
         </a>
       </Link>
-      <Link
-        href="/en-US"
-        passHref
-        locale={languages[myLocales][ENUS] as string}
-      >
+      <Link href="/en-US" passHref locale={enUS}>
         <a style={{ height: 50 }}>
           <Image
             loading="lazy"

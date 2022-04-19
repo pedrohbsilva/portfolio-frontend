@@ -1,9 +1,10 @@
+import { ReactElement } from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 import { theme } from 'src/styles/theme';
 
 import { SocialNetworksContainer } from './styles';
-const SocialNetworks = (): React.ReactElement => {
+const SocialNetworks = (): ReactElement => {
   return (
     <SocialNetworksContainer>
       <a

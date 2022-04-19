@@ -1,3 +1,12 @@
+export interface AppData {
+  theme: string;
+  toggleTheme: () => void;
+}
+
+export interface DarkmodeProps {
+  lightTheme: boolean;
+}
+
 export interface FormProps {
   name: string;
   email: string;
@@ -18,6 +27,7 @@ export interface LocaleProps {
   blog?: string;
   contact?: string;
   copyright?: string;
+  darkMode?: string;
   enUS?: string;
   hello?: string;
   home?: string;

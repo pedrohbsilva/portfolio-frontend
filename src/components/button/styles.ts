@@ -4,14 +4,15 @@ export const Container = styled.button`
   background: ${({ theme }) => theme.colors.linear};
   border: 0;
   border-radius: 8px;
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.buttonText};
   cursor: pointer;
   font-size: ${({ theme }) => theme.font.sizes.medium};
-  font-weight: 500;
+  font-weight: bold;
   height: 56px;
   padding: ${({ theme }) => theme.spacings.extraSmall};
   width: auto;
   padding: 0 16px;
+  transition: all 0.3s linear;
 
   &:not(:disabled) {
     position: relative;

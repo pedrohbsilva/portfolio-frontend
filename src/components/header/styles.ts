@@ -12,11 +12,10 @@ export const HeaderContainer = styled.header`
   padding: 20px 40px 20px 40px;
   width: 100%;
   z-index: 10;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   @media only screen and (max-width: 768px) {
     padding: 0;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px ${({ theme }) => theme.colors.shadow};
   }
 `;
 
@@ -149,6 +148,7 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
   ${({ theme, active }) => css`
     list-style: none;
     display: flex;
+    align-items: center;
     p {
       display: none;
     }
@@ -158,6 +158,7 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
       left: 0;
       flex-direction: column;
       justify-content: center;
+      align-items: stretch;
       width: 70%;
       height: 100vh;
       font-size: ${theme.font.sizes.large};

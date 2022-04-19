@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   align-items: center;
-  border: 2px solid ${({ theme }) => theme.colors.border};
+  border-top: 2px solid ${({ theme }) => theme.colors.border};
   bottom: 0;
   display: flex;
   flex-direction: row;
@@ -26,16 +26,3 @@ export const FooterText = styled.p`
     display: none;
   }
 `;
-
-// p {
-//   color: ${({ theme }) => theme.colors.text};
-//   display: flex;
-//   flex-direction: column;
-//   padding: ${({ theme }) => theme.spacings.extraSmall};
-//   span {
-//     font-weight: bold;
-//   }
-//   &:nth-child(3) {
-//
-//   }
-// }

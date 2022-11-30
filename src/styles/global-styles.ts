@@ -33,6 +33,7 @@ export const GlobalStyles = createGlobalStyle`
       display: flex;
       flex-direction: column;
       height: 100%;
+      justify-content: space-between;
       width: 100%;
     }
 
@@ -41,7 +42,9 @@ export const GlobalStyles = createGlobalStyle`
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    label,
+    p {
       color: ${theme.colors.text};
     }
     button,

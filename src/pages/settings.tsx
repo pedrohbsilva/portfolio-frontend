@@ -5,18 +5,20 @@ import Footer from 'src/components/footer';
 
 import Header from 'src/components/header';
 
+import SettingsMain from 'src/components/settingsComponents/settingsMain';
+
 import { languages } from '../locales';
-const Teaching = (): ReactElement => {
+const Settings = (): ReactElement => {
   const { locale } = useRouter();
   const myLocales = typeof locale === 'string' ? locale : 'pt-BR';
-  const { teaching } = languages[myLocales];
+  const { settings } = languages[myLocales];
   return (
     <>
-      <Header pageName={teaching} />
-      <p>{teaching}</p>
+      <Header pageName={settings} />
+      <SettingsMain />
       <Footer />
     </>
   );
 };
 
-export default Teaching;
+export default Settings;

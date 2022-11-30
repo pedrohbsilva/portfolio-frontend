@@ -25,18 +25,24 @@ export interface LinksContainerProps {
 export interface LocaleProps {
   aboutMe?: string;
   blog?: string;
+  colorTheme?: string;
   contact?: string;
   copyright?: string;
   darkMode?: string;
+  english?: string;
   enUS?: string;
   hello?: string;
   home?: string;
   language?: string;
+  lightMode?: string;
   loading?: string;
   message?: string;
   portfolio?: string;
   portfolioMessage?: string;
+  portuguese?: string;
   ptBR?: string;
+  saveChanges?: string;
+  settings?: string;
   teaching?: string;
 }
 export interface MessageProps {

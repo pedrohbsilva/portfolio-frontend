@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
   function App(): JSX.Element {
     const { theme } = useApp();
     return (
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <ThemeProvider theme={theme === 'lightMode' ? lightTheme : darkTheme}>
         <GlobalStyles />
         <Component {...pageProps} />
       </ThemeProvider>

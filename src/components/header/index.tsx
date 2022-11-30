@@ -17,8 +17,6 @@ import {
 } from './styles';
 import Icon from '../icon';
 import LogoName from '../logoName';
-import Countries from '../countries';
-import Switch from '../switch';
 
 const Header = ({ pageName }: HeaderProps): ReactElement => {
   const { locale } = useRouter();
@@ -26,8 +24,8 @@ const Header = ({ pageName }: HeaderProps): ReactElement => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const handleMenu = (): void => setMenuIsOpen(!menuIsOpen);
   const handleLink = (): void => menuIsOpen && handleMenu();
-  const keys = ['home', 'blog', 'teaching', 'portfolio'];
-  const { language, darkMode } = languages[myLocales];
+  const keys = ['home', 'blog', 'teaching', 'portfolio', 'settings'];
+
   return (
     <>
       <Seo title={`${pageName} | ${process.env.NEXT_PUBLIC_SITE_NAME}`} />
@@ -45,12 +43,6 @@ const Header = ({ pageName }: HeaderProps): ReactElement => {
           <LogoName />
           <div />
           <LinksContainer active={menuIsOpen}>
-            <p>{language}</p>
-            <Countries />
-            <li>
-              <p style={{ margin: '16px 0 0 0' }}>{darkMode}</p>
-              <Switch />
-            </li>
             {keys.map((key, index) => (
               <li key={key}>
                 <Link

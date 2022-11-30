@@ -4,7 +4,6 @@ import { ReactElement } from 'react';
 import Footer from 'src/components/footer';
 
 import Header from 'src/components/header';
-import Introduction from 'src/components/homeComponents/introduction';
 
 import { languages } from '../locales';
 const Blog = (): ReactElement => {
@@ -14,7 +13,7 @@ const Blog = (): ReactElement => {
   return (
     <>
       <Header pageName={blog} />
-      <Introduction />
+      <p>{blog}</p>
       <Footer />
     </>
   );

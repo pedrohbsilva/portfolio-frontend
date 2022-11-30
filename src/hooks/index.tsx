@@ -11,15 +11,15 @@ import { AppData } from '../interfaces';
 const AppContext = createContext<AppData>({} as AppData);
 
 const AppProvider = ({ children }): ReactElement => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('lightMode');
 
   const toggleTheme = (): void => {
-    if (theme === 'light') {
-      setTheme('dark');
-      window.localStorage.setItem('theme', 'dark');
+    if (theme === 'lightMode') {
+      setTheme('darkMode');
+      window.localStorage.setItem('theme', 'darkMode');
     } else {
-      setTheme('light');
-      window.localStorage.setItem('theme', 'light');
+      setTheme('lightMode');
+      window.localStorage.setItem('theme', 'lightMode');
     }
   };
 
@@ -29,7 +29,7 @@ const AppProvider = ({ children }): ReactElement => {
     if (localTheme) {
       setTheme(localTheme);
     } else {
-      window.localStorage.setItem('theme', 'light');
+      window.localStorage.setItem('theme', 'lightMode');
     }
   }, []);
 

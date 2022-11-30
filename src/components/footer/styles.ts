@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   align-items: center;
   border-top: 2px solid ${({ theme }) => theme.colors.border};
-  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px 40px 20px 40px;
+  position: relative;
   width: 100%;
   section {
     align-items: center;

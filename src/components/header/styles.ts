@@ -86,13 +86,10 @@ export const HeaderNav = styled.nav<LinksContainerProps>`
     margin: 0 auto;
     width: 100%;
 
-    @media only screen and (min-width: 1440px) {
-      max-width: ${theme.spacings.containerLarge};
-    }
-
     div {
       display: none;
     }
+
     button {
       z-index: 12;
       display: none;

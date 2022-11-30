@@ -1,5 +1,5 @@
 export const theme = {
-  title: 'light',
+  title: 'lightMode',
   colors: {
     text: '#000000',
     background: '#ffffff',
@@ -32,7 +32,7 @@ export const theme = {
   },
 };
 export const darkTheme = {
-  title: 'dark',
+  title: 'darkMode',
   colors: {
     text: '#C9D1D9',
     background: '#02001A',

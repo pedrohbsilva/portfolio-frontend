@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
       height: 100vh;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat';
       font-size: ${theme.font.sizes.medium};
       color: ${theme.colors.text};
       background: ${theme.colors.background};

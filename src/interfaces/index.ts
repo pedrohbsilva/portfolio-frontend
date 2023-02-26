@@ -45,6 +45,13 @@ export interface LocaleProps {
   settings?: string;
   teaching?: string;
 }
+
+export interface modalProps {
+  show: boolean;
+  onClose: () => void;
+  children: JSX.Element;
+}
+
 export interface MessageProps {
   [key: string]: LocaleProps;
 }

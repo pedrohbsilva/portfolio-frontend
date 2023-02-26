@@ -6,13 +6,13 @@ export const SettingsMainContainer = styled.main`
   flex-direction: column;
   height: 40vh;
   justify-content: space-between;
+  padding: 8px;
 
   section {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 15%;
 
     p {
       text-align: center;
@@ -29,8 +29,8 @@ export const SettingsMainContainer = styled.main`
     }
   }
   @media only screen and (max-width: 768px) {
-      section {
-        width: 60%;
-      }
+    section {
+      width: 60%;
     }
+  }
 `;

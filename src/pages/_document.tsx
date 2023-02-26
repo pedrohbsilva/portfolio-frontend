@@ -43,10 +43,17 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="apple-touch-icon" href="/vercel.svg" />
           <meta name="theme-color" content="#121214" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <div id="modal-root" />
         </body>
       </Html>
     );

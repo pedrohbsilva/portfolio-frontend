@@ -29,7 +29,6 @@ export const HeaderLink = styled.a`
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    font-family: 'Montserrat', sans-serif;
     font-size: ${theme.font.sizes.small};
     font-weight: bold;
     justify-content: center;
@@ -167,7 +166,6 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
       p {
         display: block;
         color: ${theme.colors.text};
-        font-family: 'Montserrat', sans-serif;
         font-size: ${theme.font.sizes.small};
         font-weight: bold;
         padding: 0 16px 0 16px;

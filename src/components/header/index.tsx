@@ -17,6 +17,8 @@ import {
 } from './styles';
 import Icon from '../icon';
 import LogoName from '../logoName';
+import Modal from '../modal';
+import SettingsMain from '../settingsComponents/settingsMain';
 
 const Header = ({ pageName }: HeaderProps): ReactElement => {
   const { locale } = useRouter();
@@ -24,7 +26,8 @@ const Header = ({ pageName }: HeaderProps): ReactElement => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const handleMenu = (): void => setMenuIsOpen(!menuIsOpen);
   const handleLink = (): void => menuIsOpen && handleMenu();
-  const keys = ['home', 'blog', 'teaching', 'portfolio', 'settings'];
+  const keys = ['home', 'blog', 'teaching', 'portfolio'];
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -62,9 +65,23 @@ const Header = ({ pageName }: HeaderProps): ReactElement => {
                 </Link>
               </li>
             ))}
+            <li>
+              <HeaderLink onClick={() => setShowModal(true)}>
+                {languages[myLocales].settings}
+                <Icon
+                  type="settings"
+                  style={{ marginLeft: 8 }}
+                  size={20}
+                  color={`${theme.colors.especial}`}
+                />
+              </HeaderLink>
+            </li>
           </LinksContainer>
         </HeaderNav>
       </HeaderContainer>
+      <Modal onClose={() => setShowModal(false)} show={showModal}>
+        <SettingsMain />
+      </Modal>
     </>
   );
 };

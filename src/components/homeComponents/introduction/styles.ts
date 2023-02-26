@@ -32,7 +32,6 @@ export const IntroductionContainer = styled.section`
       line-height: 22px;
       opacity: 0.8;
       text-align: justify;
-      font-family: 'Montserrat', sans-serif;
     }
   }
   span {
